@@ -165,9 +165,145 @@ img {
 /* 6. Planos
 /**********************************/
 
+.planos {
+	background-color: var(--clr-pink-light);
+}
+
+.planos-c {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.plano {
+	width: 280px;
+	margin: 10px;
+	border: 2px solid var(--clr-green-dark);
+}
+
+.plano__titulo{
+	font-size: 3rem;
+	text-align: center;
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+}
+
+.plano__preco {
+	font-size: 3rem;
+	text-align: center;
+	margin: 10px 0 5px;
+	display: block;
+    font-weight: bold;	
+}
+
+.plano__divisor {
+	border: none;
+	background-color: var(--clr-green-light) ;
+	height: 2px;
+	width: 20px;
+	margin: 5px auto;
+}
+
+.plano__preco sup {
+	position: relative;
+	font-size: 1.5rem;
+	top: -20px;
+}
+
+.plano-lista {
+	max-width: 195px;
+	margin: 0 auto;
+}
+
+
+.plano-lista__item {
+	margin: 10px 0;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+}
+
+.plano__btn-comprar {
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 15px auto;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--clr-green-dark);
+}
+
+.plano:last-child {
+   background-color: var(--clr-green-light);
+}
+
+.plano:last-child, .plano:last-child .plano__btn-comprar {
+	border: 2px solid var(--clr-pink-dark);
+ }
+ 
+@media (max-width: 800px) {
+   .plano:nth-child(3){
+	order: -2;
+   }
+   .plano:nth-child(2){
+	order: -1;
+   }
+}
+
+
 /**********************************/
 /* 7. Vantagens
 /**********************************/
+
+.vantagens {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.vantagem {
+	max-width: 240px;
+	margin: 10px;
+}
+
+.vantagem__titulo {
+	font-size: 1.7rem;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.vantagem__titulo::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.vantagem:nth-last-of-type(3n+1) .vantagem__titulo::before {
+	background-color: var(--clr-green-light);
+}
+
+.vantagem:nth-last-of-type(3n+2) .vantagem__titulo::before {
+	background-color: var(--clr-pink-dark);
+}
+
+.vantagem:nth-last-of-type(3n+3) .vantagem__titulo::before {
+	background-color: var(--clr-green-dark);
+}
+
+@media (max-width: 800px) {
+	.vantagem {
+		max-width: 220px;
+	}
+}
 
 /**********************************/
 /* 8. Newsletter
